@@ -99,6 +99,23 @@
 </nav>
 
 </div>
+
+        <button id="menuBtn" class="md:hidden p-2" aria-label="Open navigation menu">
+  <span class="material-symbols-outlined text-[#474948]">menu</span>
+</button>
+
+<div id="mobileMenu" class="hidden fixed top-[88px] left-0 w-full bg-[#fbf9f4] z-[9999] flex flex-col items-center gap-3 py-6 font-['Noto_Serif'] text-xl shadow-lg">
+
+  <button id="closeBtn" class="self-start ml-6 text-3xl text-[#474948]">
+    ✕
+  </button>
+
+  <a href="index.html" class="text-[#1b1c19]">Home</a>
+  <a href="about.html" class="text-[#1b1c19]">About Us</a>
+  <a href="contact.html" class="text-[#1b1c19]">Contact Us</a>
+  <a href="testimonials.html" class="text-[#1b1c19]">Testimonials</a>
+
+
 </header>
 <main class="pt-32 pb-20">
 <!-- Hero Section -->
@@ -218,4 +235,17 @@
 <a class="text-[#645e52] dark:text-[#c7c7bc] font-['Manrope'] text-sm tracking-widest uppercase hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="testimonials.html">Testimonials</a>
 </div>
 </footer>
+        <script>
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+</script>
 </body></html>
