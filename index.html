@@ -149,14 +149,20 @@
   <span class="material-symbols-outlined text-3xl">
     menu
   </span>
-</button>
-      <!-- Desktop Navigation -->
-<nav class="hidden md:flex gap-6">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="testimonials.html">Testimonials</a>
-</nav>
+<button id="menuBtn" class="menu-btn">☰</button>
+
+<div id="mobileMenu" class="mobile-menu">
+
+    <button id="closeBtn" class="close-btn">✕</button>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="testimonials.html">Testimonials</a>
+    </nav>
+
+</div>
 
 <!-- Mobile Navigation -->
 <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-black p-6 z-50">
@@ -372,12 +378,17 @@ Contact us today to start your interior design journey.
 </div>
 </div>
 </footer>
-      <script>
-const menuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
+     <script>
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-menuButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("show");
+});
+
+closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("show");
 });
 </script>
 </body></html>
