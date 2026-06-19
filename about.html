@@ -95,18 +95,7 @@
   <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 
-<!-- Mobile Navigation -->
-<div id="mobileMenu" class="hidden fixed top-[88px] left-0 w-full bg-[#fbf9f4] z-[9999] flex flex-col items-center gap-3 py-6 font-['Noto_Serif'] text-xl shadow-lg">
-      <button id="closeBtn" class="self-start ml-6 text-3xl text-[#474948]">
-    ✕
-  </button>
 
-  <a href="index.html" class="text-[#1b1c19]">Home</a>
-  <a href="about.html" class="text-[#1b1c19]">Contact Us</a>
-  <a href="contact.html" class="text-[#1b1c19]">Testimonials</a>
-  <a href="testimonials.html" class="text-[#1b1c19]">Testimonials</a>
-
-</div>
 
 </head>
 <body class="bg-surface text-on-surface manrope selection:bg-tertiary-fixed selection:text-on-tertiary-fixed-variant">
@@ -120,9 +109,21 @@
 <a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Manrope'] text-sm tracking-widest uppercase" href="testimonials.html">Testimonials</a>
 <a class="bg-primary text-on-primary px-6 py-2 text-xs tracking-widest uppercase hover:opacity-90 transition-opacity scale-100 active:scale-95 transition-transform" href="contact.html">Contact</a>
 </div>
-<button class="md:hidden p-2 active:scale-95 transition-transform duration-200">
+
 <span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]">menu</span>
 </button>
+      <div id="mobileMenu" class="hidden fixed top-[88px] left-0 w-full bg-[#fbf9f4] z-[9999] flex flex-col items-center gap-3 py-6 font-['Noto_Serif'] text-xl shadow-lg">
+
+  <button id="closeBtn" class="self-start ml-6 text-3xl text-[#474948]">
+    ✕
+  </button>
+
+  <a href="index.html" class="text-[#1b1c19]">Home</a>
+ 
+  <a href="contact.html" class="text-[#1b1c19]">Contact Us</a>
+  <a href="testimonials.html" class="text-[#1b1c19]">Testimonials</a>
+
+</div>
 </nav>
 <main class="pt-32 pb-24 px-8 md:px-16 max-w-7xl mx-auto">
 <!-- Hero Section: Narrative -->
@@ -237,8 +238,7 @@
 </a>
 </div>
 </footer>
-      
-<script>
+      <script>
 const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -251,5 +251,6 @@ closeBtn.addEventListener("click", () => {
   mobileMenu.classList.add("hidden");
 });
 </script>
+
 
 </body></html>
